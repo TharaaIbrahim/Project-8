@@ -123,7 +123,7 @@
                                 .
                             </div>
                             <div>
-                       <button class="create"><a href="{{route('rooms.create')}}">Create Room</a></button>
+                       <button class="create"><a href="{{route('user.create')}}">Create User</a></button>
 
                                 
                             </div>
@@ -138,43 +138,35 @@
                                     <thead>
                                         <tr>
                                             <th>name</th>
-                                            <th>price</th>
-                                            <th>description</th>
-                                            <th>capacity</th>
-                                            <th>bed </th>
-                                            <th>services</th>
-                                            <th>image room</th>
-                                            <th>Edit</th>
-                                            <th>delete</th>
+                                            <th>email</th>
+                                            <th>phone</th>
+                                            <th>password</th>
+                                            <th>is_admin </th>
+                                          
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                         <th>name</th>
-                                            <th>price</th>
-                                            <th>description</th>
-                                            <th>capacity</th>
-                                            <th>bed </th>
-                                            <th>services</th>
-                                            <th>image room</th>
-                                            <th>Edit</th>
-                                            <th>delete</th>
+                                            <th>email</th>
+                                            <th>phone</th>
+                                            <th>password</th>
+                                            <th>is_admin </th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        @foreach($rooms as $room)
+                                        @foreach($users as $user)
                                         <tr>
-                                            <td>{{$room->name}}</td>   
-                                            <td>{{$room->price}}</td>
-                                            <td>{{$room->description}}</td>
-                                            <td>{{$room->capacity}}</td>
-                                            <td>{{$room->bed}}</td>
-                                            <td>{{$room->services}}</td>
-                                            <td><img src="{{$room->img}}" alt="{{$room->name}}"/></td>
-                                            <td><button class="edit"><a href="{{route('rooms.edit',$room->id)}}">edit</a></button></td>
+                                            <td>{{$user->name}}</td>   
+                                            <td>{{$user->email}}</td>
+                                            <td>{{$user->phone}}</td>
+                                            <td>{{$user->password}}</td>
+                                            <td>{{$user->is_admin}}</td>
+                                          
+                                            <td><button class="edit"><a href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                           
 
-                                            <form method="POST" action="{{route('rooms.destroy',$room->id)}}">
+                                            <form method="POST" action="{{route('user.destroy',$user->id)}}">
                                              @csrf
                                              @method('delete')
 
