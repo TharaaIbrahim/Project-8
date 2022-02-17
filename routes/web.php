@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 Auth::routes();
 //Tharaa
+//test
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
