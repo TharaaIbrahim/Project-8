@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserRoomTable extends Migration
+class CreateRoomUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateUserRoomTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_room', function (Blueprint $table) {
+        Schema::create('room_user', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('room_id');
             $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
-            $table->unsignedBigInteger('movie_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->date('check_in');
             $table->date('check_out');
@@ -32,6 +32,6 @@ class CreateUserRoomTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_room');
+        Schema::dropIfExists('room_user');
     }
 }
