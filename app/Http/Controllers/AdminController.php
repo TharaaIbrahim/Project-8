@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\admin;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,7 @@ class RoomController extends Controller
     {
         //
         $rooms=Room::all();
-        return view('rooms.rooms',compact("rooms"));
- 
+        return view('admin.tables',compact("rooms"));
     }
 
     /**
@@ -28,8 +28,6 @@ class RoomController extends Controller
     public function create()
     {
         //
-        return view('admin.roomcreate');
-
     }
 
     /**
@@ -41,70 +39,53 @@ class RoomController extends Controller
     public function store(Request $request)
     {
         //
-      Room::create($request->all());
-        // $room->create($request->all());
-        $rooms=Room::all();
-
-        return view('admin.tables',compact("rooms"));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Room  $room
+     * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function show(Room $room)
+    public function show(admin $admin)
     {
-        return view('rooms.room-details',compact("room"));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Room  $room
+     * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Room $room)
+    public function edit($id)
     {
-    
-    
-        return view('admin.roomedit',compact("room"));
+        //
+
+        
+
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Room  $room
+     * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Room $room)
+    public function update(Request $request, admin $admin)
     {
-    
-        $room->update($request->all());
-      
-        $rooms=Room::all();
-
-        return view('admin.tables',compact("rooms"));
-     
-
-      
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Room  $room
+     * @param  \App\Models\admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Room $room)
+    public function destroy(admin $admin)
     {
-      
-// dd($room);
-        $room->delete(); 
-        return redirect()->back();
-    
-
+        //
     }
 }

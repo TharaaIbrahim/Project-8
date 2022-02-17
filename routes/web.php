@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +19,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('about-us');
-});
+// Route::get('/', function () {
+//     return view('rooms/room-details');
+// });
 
 Auth::routes();
 //Tharaa
 //test
+
+Route::resource('/rooms',RoomController::class);
+Route::resource('/admin',AdminController::class);
+Route::resource('/user',UserController::class);
+
+
+
+
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::delete('/rooms/{room}', [RoomController::class, 'destroy']);
+
+
+
