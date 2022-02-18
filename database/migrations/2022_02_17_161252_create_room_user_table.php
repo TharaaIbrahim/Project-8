@@ -19,8 +19,9 @@ class CreateRoomUserTable extends Migration
             $table->foreign('room_id')->references('id')->on('rooms')->onDelete('cascade');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->date('check_in');
-            $table->date('check_out');
+            $table->datetime('check_in');
+            $table->datetime('check_out');
+            $table->text('phone');
             $table->timestamps();
         });
     }

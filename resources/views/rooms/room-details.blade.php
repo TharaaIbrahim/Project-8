@@ -295,29 +295,39 @@
                 <div class="col-lg-4">
                     <div class="room-booking">
                         <h3>Your Reservation</h3>
-                        <form action="#">
+                        @php
+                        $datetime = date_create()->format('Y-m-d H:i:s');
+                        @endphp
+                        <form method="post" action="{{route('rooms.book',$room->id)}}">
+                        @csrf
                             <div class="check-date">
                                 <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
+                                <input type="date"  min=<?php echo $datetime ?> id="date-in" name="check_in">
                             </div>
                             <div class="check-date">
                                 <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
+                                <input type="date" min=<?php echo $datetime ?>  id="date-out" name="check_out">
                             </div>
-                            <div class="select-option">
+                            <div class="check-date">
+                                <label for="phone">Phone:</label>
+                                <input type="tel" id="phone" name="phone">
+                                <i class="icon_phone"></i>
+                            </div>
+                            <!-- <div class="select-option">
                                 <label for="guest">Guests:</label>
                                 <select id="guest">
                                     <option value="">3 Adults</option>
                                 </select>
-                            </div>
-                            <div class="select-option">
+                            </div> -->
+                            <!-- <div class="select-option">
                                 <label for="room">Room:</label>
                                 <select id="room">
                                     <option value="">1 Room</option>
                                 </select>
-                            </div>
+                            </div> -->
+                            @if(!empty(Session::get('message')))
+                           <div class="alert alert-success"> {{ Session::get('message') }}</div>
+                            @endif
                             <button type="submit">Check Availability</button>
                         </form>
                     </div>
