@@ -14,16 +14,16 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/elegant-icons.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/nice-select.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
 </head>
 
 <body>
@@ -187,10 +187,10 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="room-details-item">
-                        <img src="img/room/room-details.jpg" alt="">
+                        <img src="{{$room->img}}" alt="{{$room->name}}">
                         <div class="rd-text">
                             <div class="rd-title">
-                                <h3>Premium King Room</h3>
+                                <h3>{{$room->name}}</h3>
                                 <div class="rdt-right">
                                     <div class="rating">
                                         <i class="icon_star"></i>
@@ -202,42 +202,28 @@
                                     <a href="#">Booking Now</a>
                                 </div>
                             </div>
-                            <h2>159$<span>/Pernight</span></h2>
+                            <h2>{{$room->price}}JD<span>/Pernight</span></h2>
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td class="r-o">Size:</td>
-                                        <td>30 ft</td>
-                                    </tr>
-                                    <tr>
                                         <td class="r-o">Capacity:</td>
-                                        <td>Max persion 5</td>
+                                        <td>{{$room->capacity}}</td>
                                     </tr>
                                     <tr>
                                         <td class="r-o">Bed:</td>
-                                        <td>King Beds</td>
+                                        <td>{{$room->bed}}</td>
                                     </tr>
                                     <tr>
                                         <td class="r-o">Services:</td>
-                                        <td>Wifi, Television, Bathroom,...</td>
+                                        <td>{{$room->services}}</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="f-para">Motorhome or Trailer that is the question for you. Here are some of the
-                                advantages and disadvantages of both, so you will be confident when purchasing an RV.
-                                When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth
-                                wheeler? The advantages and disadvantages of both are studied so that you can make your
-                                choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an
-                                achievement of a lifetime. It can be similar to sojourning with your residence as you
-                                search the various sites of our great land, America.</p>
-                            <p>The two commonly known recreational vehicle classes are the motorized and towable.
-                                Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth
-                                wheel has the attraction of getting towed by a pickup or a car, thus giving the
-                                adaptability of possessing transportation for you when you are parked at your campsite.
-                            </p>
+                            <p class="f-para">{{$room->description}}</p>
+                            <p>{{$room->description}}</p>
                         </div>
                     </div>
-                    <div class="rd-reviews">
+                    <!-- <div class="rd-reviews">
                         <h4>Reviews</h4>
                         <div class="review-item">
                             <div class="ri-pic">
@@ -277,7 +263,7 @@
                                     magnam.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="review-add">
                         <h4>Add Review</h4>
                         <form action="#" class="ra-form">
@@ -420,14 +406,14 @@
     <!-- Search model end -->
 
     <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+    <script src="{{asset('js/jquery.slicknav.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 
 </html>

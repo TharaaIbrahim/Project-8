@@ -1,11 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 
-use App\Models\Room;
+
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,9 @@ class RoomController extends Controller
      */
     public function index()
     {
-        $rooms=Room::all();
-        return view('rooms.rooms',compact("rooms"));
- 
+        //
+        $users=User::all();
+        return view("admin.usertable",compact("users"));
     }
 
     /**
@@ -26,7 +27,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        return view('admin.roomcreate');
+        return view('admin.userCreate');
     }
 
     /**
@@ -37,61 +38,56 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-      Room::create($request->all());
-        $rooms=Room::all();
-        return view('admin.tables',compact("rooms"));
+        User::create($request->all());
+        $users=User::all();
+        return view('admin.usertable',compact("users"));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Room $room)
+    public function show($id)
     {
-        return view('rooms.room-details',compact("room"));
-    }
-
-    public function book(Request $request,Room $room)
-    {
-        // $room->users()->attach($user_id, ['price'=> $price ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Room $room)
-    {  
-        return view('admin.roomedit',compact("room"));
+    public function edit(User $user)
+    {
+        return view('admin.useredit',compact("user"));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Room $room)
-    {  
-        $room->update($request->all());   
-        $rooms=Room::all();
-        return view('admin.tables',compact("rooms"));  
+    public function update(Request $request,User $users)
+    {
+        $users->update($request->all());   
+        $users=User::all();
+        return view('admin.usertable',compact("users"));  
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Room $room)
-    {   
-        $room->delete(); 
+    public function destroy(User $user)
+    {
+        $user->delete(); 
         return redirect()->back();
     }
 }

@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +21,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('about-us');
+    return view('rooms/index');
 });
 
+Route::get('/about', function () {
+    return view('rooms/about-us');
+});
+Route::get('/contact', function () {
+    return view('rooms/contact');
+});
+
+
 Auth::routes();
+<<<<<<< HEAD
 //Tharaa
 //test
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // rahaf
+=======
+Route::resource('/rooms',RoomController::class);
+Route::resource('/admin',AdminController::class);
+Route::resource('/user',UserController::class);
+Route::post('/rooms/{room}', [RoomController::class, 'book']);
+
+
+
+
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+>>>>>>> 90955392bb0a34bfc4b8a288f76acdcd69c92267
