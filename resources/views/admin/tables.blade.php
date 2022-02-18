@@ -173,13 +173,15 @@
                                             <td><img src="{{$room->img}}" alt="{{$room->name}}"/></td>
                                             <td><button class="edit"><a href="{{route('rooms.edit',$room->id)}}">edit</a></button></td>
                                           
-
+                                            <td>
                                             <form method="POST" action="{{route('rooms.destroy',$room->id)}}">
                                              @csrf
                                              @method('delete')
 
-                                           <td><button type="submit" class="delete">delete</button></td>
+                                          <button type="submit" class="delete">delete</button>
                                        </form>
+                                    </td>
+
                                         </tr>
                                         @endforeach
                                     </tbody>

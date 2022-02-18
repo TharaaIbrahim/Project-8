@@ -165,13 +165,14 @@
                                           
                                             <td><button class="edit"><a href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                           
-
+                                            <td>
                                             <form method="POST" action="{{route('user.destroy',$user->id)}}">
                                              @csrf
                                              @method('delete')
 
-                                           <td><button type="submit" class="delete">delete</button></td>
+                                         <button type="submit" class="delete">delete</button>
                                        </form>
+                                    </td>
                                         </tr>
                                         @endforeach
                                     </tbody>

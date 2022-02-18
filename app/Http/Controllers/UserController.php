@@ -27,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.userCreate');
     }
 
     /**
@@ -38,7 +38,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        User::create($request->all());
+        $users=User::all();
+        return view('admin.usertable',compact("users"));
     }
 
     /**
@@ -58,9 +60,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('admin.useredit',compact("user"));
     }
 
     /**
@@ -70,9 +72,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $user)
     {
-        //
+        $users->update($request->all());   
+        $users=User::all();
+        return view('admin.usertables',compact("users"));  
     }
 
     /**
@@ -83,7 +87,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
         $user->delete(); 
         return redirect()->back();
     }

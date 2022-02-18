@@ -14,7 +14,6 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
         $rooms=Room::all();
         return view('rooms.rooms',compact("rooms"));
  
@@ -27,9 +26,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
         return view('admin.roomcreate');
-
     }
 
     /**
@@ -40,11 +37,8 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
       Room::create($request->all());
-        // $room->create($request->all());
         $rooms=Room::all();
-
         return view('admin.tables',compact("rooms"));
     }
 
@@ -66,9 +60,7 @@ class RoomController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Room $room)
-    {
-    
-    
+    {  
         return view('admin.roomedit',compact("room"));
     }
 
@@ -80,16 +72,10 @@ class RoomController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Room $room)
-    {
-    
-        $room->update($request->all());
-      
+    {  
+        $room->update($request->all());   
         $rooms=Room::all();
-
-        return view('admin.tables',compact("rooms"));
-     
-
-      
+        return view('admin.tables',compact("rooms"));  
     }
 
     /**
@@ -99,12 +85,8 @@ class RoomController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Room $room)
-    {
-      
-// dd($room);
+    {   
         $room->delete(); 
         return redirect()->back();
-    
-
     }
 }

@@ -18,29 +18,30 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">edit User</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create User</h3></div>
                                     <div class="container">
 
                                         <form method="post" action="{{route('user.store')}}">
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">name</label>
-                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name"  value="{{$user->name}}">
+                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">email</label>
-                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required value="{{$user->email}}">
+                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">phone</label>
-                                                <input type="tel" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Enter phone number" required value="{{$user->phone}}">
+                                                <input type="tel" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Enter phone number" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleFormControlTextarea1" class="form-label">password</label>
                                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                                             </div>
                                             <input class="mb-5" type="submit" value="submit">
-                                        </form>                                       
+                                        </form>
+                                        
                                         </div>
                                 </div>
                             </div>

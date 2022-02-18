@@ -15,7 +15,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //
         $rooms=Room::all();
         return view('admin.tables',compact("rooms"));
     }

@@ -13,17 +13,17 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+      <!-- Css Styles -->
+      <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/elegant-icons.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/flaticon.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/nice-select.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}" type="text/css">
+      <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
 </head>
 
 <body>
@@ -45,16 +45,7 @@
             <i class="icon_search"></i>
         </div>
         <div class="header-configure-area">
-            <div class="language-option">
-                <img src="img/flag.jpg" alt="">
-                <span>EN <i class="fa fa-angle-down"></i></span>
-                <div class="flag-dropdown">
-                    <ul>
-                        <li><a href="#">Zi</a></li>
-                        <li><a href="#">Fr</a></li>
-                    </ul>
-                </div>
-            </div>
+           
             <a href="#" class="bk-btn">Booking Now</a>
         </div>
         <nav class="mainmenu mobile-menu">
@@ -455,15 +446,15 @@
     </div>
     <!-- Search model end -->
 
-    <!-- Js Plugins -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+      <!-- Js Plugins -->
+      <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+      <script src="{{asset('js/bootstrap.min.js')}}"></script>
+      <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+      <script src="{{asset('js/jquery.nice-select.min.js')}}"></script>
+      <script src="{{asset('js/jquery-ui.min.js')}}"></script>
+      <script src="{{asset('js/jquery.slicknav.js')}}"></script>
+      <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+      <script src="{{asset('js/main.js')}}"></script>
 </body>
 
 </html>
