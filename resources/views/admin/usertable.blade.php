@@ -161,7 +161,7 @@
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->phone}}</td>
                                             <td>{{$user->password}}</td>
-                                            <td>{{$user->is_admin}}</td>
+                                            <td>{{$user->role}}</td>
                                           
                                             <td><button class="edit"><a href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                           

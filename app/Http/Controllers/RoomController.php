@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Room;
 use Illuminate\Http\Request;
+
+
 
 class RoomController extends Controller
 {
@@ -54,8 +58,31 @@ class RoomController extends Controller
     }
 
     public function book(Request $request,Room $room)
-    {
-        // $room->users()->attach($user_id, ['price'=> $price ]);
+    {   
+        if (Auth::check()) {
+        $rooms = DB::table('room_user')->where('room_id', $room->id)->get();
+        $error=false;
+        foreach($rooms as $single){
+            $in=$single->check_in;
+            $out=$single->check_out;
+             if(($request->check_in >= $in && $request->check_in <= $out ) || ($request->check_out >= $in && $request->check_out <= $out) || ($request->check_in <= $in && $request->check_out >= $out ) ){
+                 $error=true;
+                 return redirect()->back()->with('message','this date is already booked');
+                 break;
+           
+        }}
+        if(!$error){
+             $id=Auth::user()->id;
+            // $room= new Room();
+            $room->users()->attach($id,['check_in'=> $request->check_in,'check_out'=>$request->check_out,'phone'=>$request->phone]);
+        }
+             
+        }
+         
+        else{
+            return redirect('/login'); 
+        }
+          
     }
 
     /**
@@ -94,4 +121,5 @@ class RoomController extends Controller
         $room->delete(); 
         return redirect()->back();
     }
+
 }

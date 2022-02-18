@@ -36,14 +36,14 @@ Auth::routes();
 Route::resource('/rooms',RoomController::class);
 Route::resource('/admin',AdminController::class);
 Route::resource('/user',UserController::class);
-Route::post('/rooms/{room}', [RoomController::class, 'book']);
+Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book');
 
 
 
 
 
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
 
