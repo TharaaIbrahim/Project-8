@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 
 
 
@@ -19,26 +20,30 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('rooms/room-details');
-// });
+Route::get('/', function () {
+    return view('rooms/index');
+});
+
+Route::get('/about', function () {
+    return view('rooms/about-us');
+});
+Route::get('/contact', function () {
+    return view('rooms/contact');
+});
+
 
 Auth::routes();
-//Tharaa
-//test
-
 Route::resource('/rooms',RoomController::class);
 Route::resource('/admin',AdminController::class);
 Route::resource('/user',UserController::class);
+Route::post('/rooms/{room}', [RoomController::class, 'book']);
 
 
 
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Route::delete('/rooms/{room}', [RoomController::class, 'destroy']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 

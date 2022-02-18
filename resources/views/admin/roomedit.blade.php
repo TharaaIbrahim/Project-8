@@ -7,10 +7,10 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Register - SB Admin</title>
-        <link href="css2/styles.css" rel="stylesheet" />
+        <link href="{{asset('css2/styles.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-primary">
+    <body >
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
@@ -18,7 +18,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-7">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">edit Room</h3></div>
                                     <div class="card-body">
                                         <form method="post" action="{{route('rooms.update',$room->id)}}">
                                         @csrf

@@ -21,8 +21,9 @@
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">edit User</h3></div>
                                     <div class="container">
 
-                                        <form method="post" action="{{route('user.store')}}">
+                                        <form method="post" action="{{route('user.update',$user->id)}}">
                                             @csrf
+                                            @method('PUT')
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">name</label>
                                                 <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name"  value="{{$user->name}}">

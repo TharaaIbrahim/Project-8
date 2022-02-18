@@ -15,10 +15,18 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+       <!-- Css Styles -->
+       <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/elegant-icons.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/flaticon.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/nice-select.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/jquery-ui.min.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/slicknav.min.css')}}" type="text/css">
+       <link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css">
 </head>
 <body>
     <div id="app">

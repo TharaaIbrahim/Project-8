@@ -72,11 +72,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,User $user)
+    public function update(Request $request,User $users)
     {
         $users->update($request->all());   
         $users=User::all();
-        return view('admin.usertables',compact("users"));  
+        return view('admin.usertable',compact("users"));  
     }
 
     /**

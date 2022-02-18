@@ -53,6 +53,11 @@ class RoomController extends Controller
         return view('rooms.room-details',compact("room"));
     }
 
+    public function book(Request $request,Room $room)
+    {
+        // $room->users()->attach($user_id, ['price'=> $price ]);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
