@@ -1,3 +1,4 @@
+@extends('layouts.footer')
 @extends('layouts.header')
 @section('content')
 
@@ -7,10 +8,10 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="hero-text">
-                        <h1>Sona A Luxury Hotel</h1>
+                        <h1>RelaxO Hotel</h1>
                         <p>Here are the best hotel booking sites, including recommendations for international
                             travel and for finding low-priced hotel rooms.</p>
-                        <a href="#" class="primary-btn">Discover Now</a>
+                        <a href="{{route('rooms.index')}}" class="primary-btn">Discover Now</a>
                     </div>
                 </div>
               
@@ -32,13 +33,12 @@
                     <div class="about-text">
                         <div class="section-title">
                             <span>About Us</span>
-                            <h2>Intercontinental LA <br />Westlake Hotel</h2>
+                            <h2>RelaxO Hotel</h2>
                         </div>
-                        <p class="f-para">Sona.com is a leading online accommodation site. We’re passionate about
+                        <p class="f-para">RelaxO.com is a leading online accommodation site. We’re passionate about
                             travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
                             languages.</p>
-                        <p class="s-para">So when it comes to booking the perfect hotel, vacation rental, resort,
-                            apartment, guest house, or tree house, we’ve got you covered.</p>
+                        <p class="s-para">So when it comes to booking the perfect hotel, we’ve got you covered.</p>
                         <a href="#" class="primary-btn about-btn">Read More</a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                 <div class="col-lg-4 col-sm-6">
                     <div class="service-item">
                         <i class="flaticon-012-cocktail"></i>
-                        <h4>Bar & Drink</h4>
+                        <h4> Drink</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                             labore et dolore magna.</p>
                     </div>
@@ -125,126 +125,39 @@
     <!-- Services Section End -->
 
     <!-- Home Room Section Begin -->
-    <section class="hp-room-section">
-        <div class="container-fluid">
-            <div class="hp-room-items">
-                <div class="row">
+    <section class="hp-room-section" style="border-top: 1px solid #e5e5e5">
+        <div class="container-fluid" style="">
+            <div class="hp-room-items" >
+                <h2 style="text-align: center;margin-bottom:2em">Best Rooms</h2>
+                <div class="row" >
+                    @foreach($rooms as $room)
                     <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b1.jpg">
+                        <div class="hp-room-item set-bg" data-setbg="{{$room->img}}">
                             <div class="hr-text">
-                                <h3>Double Room</h3>
-                                <h2>199$<span>/Pernight</span></h2>
+                                <h3>{{$room->name}}</h3>
+                                <h2>{{$room->price}}<span>/Pernight</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
                                             <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
+                                            <td>{{$room->capacity}}</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
+                                            <td>{{$room->bed}}</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
+                                            <td>{{$room->services}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="#" class="primary-btn">More Details</a>
+                                <a href="{{route('rooms.show',$room->id)}}" class="primary-btn">More Details</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b2.jpg">
-                            <div class="hr-text">
-                                <h3>Premium King Room</h3>
-                                <h2>159$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b3.jpg">
-                            <div class="hr-text">
-                                <h3>Deluxe Room</h3>
-                                <h2>198$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="hp-room-item set-bg" data-setbg="img/room/room-b4.jpg">
-                            <div class="hr-text">
-                                <h3>Family Room</h3>
-                                <h2>299$<span>/Pernight</span></h2>
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td class="r-o">Size:</td>
-                                            <td>30 ft</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>Max persion 5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>King Beds</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>Wifi, Television, Bathroom,...</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <a href="#" class="primary-btn">More Details</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                   
                 </div>
             </div>
         </div>
@@ -267,37 +180,25 @@
                     <div class="testimonial-slider owl-carousel">
                         <div class="ts-item">
                             <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
+                                needed a place to stay for a few nights. As a Amman resident, we know a lot about our
                                 city, neighborhood and the types of housing options available and absolutely love our
                                 vacation at Sona Hotel.</p>
                             <div class="ti-author">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5> - Alexander Vasquez</h5>
+                              
+                                <h5> Haneen Edinat</h5>
                             </div>
-                            <img src="img/testimonial-logo.png" alt="">
+                            <!-- <img src="img/testimonial-logo.png" alt=""> -->
                         </div>
                         <div class="ts-item">
                             <p>After a construction project took longer than expected, my husband, my daughter and I
-                                needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
+                                needed a place to stay for a few nights. As a Amman resident, we know a lot about our
                                 city, neighborhood and the types of housing options available and absolutely love our
                                 vacation at Sona Hotel.</p>
                             <div class="ti-author">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5> - Alexander Vasquez</h5>
+                             
+                                <h5>Tharaa Harb</h5>
                             </div>
-                            <img src="img/testimonial-logo.png" alt="">
+                            <!-- <img src="img/testimonial-logo.png" alt=""> -->
                         </div>
                     </div>
                 </div>
@@ -307,7 +208,7 @@
     <!-- Testimonial Section End -->
 
     <!-- Blog Section Begin -->
-    <section class="blog-section spad">
+    <!-- <section class="blog-section spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -365,11 +266,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Blog Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer-section">
+    <!-- <footer class="footer-section">
         <div class="container">
             <div class="footer-text">
                 <div class="row">
@@ -425,14 +326,15 @@
                         </ul>
                     </div>
                     <div class="col-lg-5">
-                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
-                    </div>
+                        <div class="co-text"><p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!-- </p></div> -->
+                    <!-- </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- Footer Section End -->
 
     <!-- Search model Begin -->

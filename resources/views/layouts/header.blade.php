@@ -7,7 +7,7 @@
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>relaxO</title>
+    <title>RelaxO Hotel</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
     </div>
 
     <!-- Offcanvas Menu Section Begin -->
-    <div class="offcanvas-menu-overlay"></div>
+    <!-- <div class="offcanvas-menu-overlay"></div>
     <div class="canvas-open">
         <i class="icon_menu"></i>
     </div>
@@ -76,7 +76,7 @@
             <a href="#"><i class="fa fa-tripadvisor"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
-        <ul class="top-widget">
+        <!-- <ul class="top-widget">
             <li><i class="fa fa-phone"></i> (12) 345 67890</li>
             <li><i class="fa fa-envelope"></i> info@relaxo.com</li>
         </ul>
@@ -90,19 +90,29 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-                            <li><i class="fa fa-envelope"></i> info@relaxo.com</li>
+                            <li><i class="fa fa-phone"></i>0777777777</li>
+                            <li><i class="fa fa-envelope"></i> RelaxO.Hotel@gmail.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
                         <div class="tn-right">
                             <div class="top-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="https://web.facebook.com/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                            <a href="/rooms" class="bk-btn">Booking Now</a>
+                            <div class="language-option">
+                                <img src="img/jordan.jpg" alt="">
+                                <!-- <span>EN <i class="fa fa-angle-down"></i></span>
+                                <div class="flag-dropdown">
+                                    <ul>
+                                        <li><a href="#">Zi</a></li>
+                                        <li><a href="#">Fr</a></li>
+                                    </ul>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,8 +123,9 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html">
-                                <img src="img/logo.png" alt="">
+                            <a href="/">
+                                <!-- <img src="img/logo.png" alt=""> -->
+                                <h2 style="font-family: 'Lora', serif">RelaxO<span style="color: #dfa974;">.</span></h2>
                             </a>
                         </div>
                     </div>
