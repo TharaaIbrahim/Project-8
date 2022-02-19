@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\admin;
 use App\Models\Room;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,6 +18,24 @@ class AdminController extends Controller
     {
         $rooms=Room::all();
         return view('admin.tables',compact("rooms"));
+    }
+    public function showreservation(admin $admin)
+    {
+        // $reservations= DB::table('room_user')->get();
+        // $reservations= DB::table('users')->select([
+        //     'users.id',
+        //     'users.name',
+        //     'users.email',
+        //     'room_user.phone',
+        //     'room_user.check_in',
+        //     'room_user.check_out',
+        //     'rooms.name',
+        //     'rooms.price',
+        //     'rooms.capacity',
+        // ])->Join('room_user','users.id', '=', 'room_user.user_id')
+        // ->Join('rooms','rooms.id', '=','room_user.room_id')
+        // ->get();
+        // return view('admin.reservationTable',compact("reservations"));
     }
 
     /**
@@ -48,7 +67,20 @@ class AdminController extends Controller
      */
     public function show(admin $admin)
     {
-        //
+        $reservations= DB::table('users')->select([
+            'users.id',
+            'users.name',
+            'users.email',
+            'room_user.phone',
+            'room_user.check_in',
+            'room_user.check_out',
+            'rooms.name',
+            'rooms.price',
+            'rooms.capacity',
+        ])->Join('room_user','users.id', '=', 'room_user.user_id')
+        ->Join('rooms','rooms.id', '=','room_user.room_id')
+        ->get();
+        return view('admin.reservationTable',compact("reservations"));
     }
 
     /**

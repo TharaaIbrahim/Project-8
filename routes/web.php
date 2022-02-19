@@ -33,16 +33,11 @@ Route::get('/contact', function () {
 
 
 Auth::routes();
-<<<<<<< HEAD
-//Tharaa
-//test
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// rahaf
-=======
 Route::resource('/rooms',RoomController::class);
 Route::resource('/admin',AdminController::class);
 Route::resource('/user',UserController::class);
 Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book');
+// Route::get('/', [AdminController::class, 'show']);
 
 
 
@@ -53,4 +48,3 @@ Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book'
 
 
 
->>>>>>> 90955392bb0a34bfc4b8a288f76acdcd69c92267
