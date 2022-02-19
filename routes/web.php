@@ -23,7 +23,6 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('rooms/index');
 });
-
 Route::get('/about', function () {
     return view('rooms/about-us');
 });
@@ -31,12 +30,13 @@ Route::get('/contact', function () {
     return view('rooms/contact');
 });
 
-
 Auth::routes();
 Route::resource('/rooms',RoomController::class);
 Route::resource('/admin',AdminController::class);
 Route::resource('/user',UserController::class);
 Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book');
+Route::get('/userProfile', [UserController::class, 'userProfile'])->name('auth.userProfile');
+Route::put('/userProfile/{user}', [UserController::class, 'updateUserProfile'])->name('user.updateUserProfile');
 
 
 

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Room;
 
 
 use Illuminate\Http\Request;
@@ -90,4 +93,23 @@ class UserController extends Controller
         $user->delete(); 
         return redirect()->back();
     }
+
+    //user profile view
+    public function userProfile()
+    {
+        $rooms = Room::join('room_user', 'rooms.id', '=', 'room_user.room_id')
+        ->where('room_user.user_id',Auth::user()->id)
+               ->get(['rooms.*', 'room_user.*']);
+               
+        // $users = DB::table('room_user')->where('user_id',Auth::user()->id)->get();
+        // dd($rooms);
+        return view('auth.userProfile',compact("rooms"));    
+    }
+    public function updateUserProfile(Request $request,User $user)
+    {
+        $user->update($request->all());   
+        $users=User::all();
+        return redirect()->back();
+    }
+
 }

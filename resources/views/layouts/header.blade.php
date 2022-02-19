@@ -7,7 +7,7 @@
     <meta name="keywords" content="Sona, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sona | Template</title>
+    <title>relaxO</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
@@ -24,6 +24,23 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+           .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            color: #dfa974;
+            background-color: #dfa974
+           }
+           .nav-pills .nav-link.active, .nav-pills .show>.nav-link:focus{
+            color: white;
+            background-color: #dfa974
+           }
+           .nav-link-faded{
+               color: #dfa974;
+           }
+           .nav-link-faded:hover{
+               color: #dfa974;
+           }
+     </style>
 </head>
 
 <body>
@@ -44,19 +61,6 @@
         <div class="search-icon  search-switch">
             <i class="icon_search"></i>
         </div>
-        <div class="header-configure-area">
-            <div class="language-option">
-                <img src="img/flag.jpg" alt="">
-                <span>EN <i class="fa fa-angle-down"></i></span>
-                <div class="flag-dropdown">
-                    <ul>
-                        <li><a href="#">Zi</a></li>
-                        <li><a href="#">Fr</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="bk-btn">Booking Now</a>
-        </div>
         <nav class="mainmenu mobile-menu">
             <ul>
                 <li class="active"><a href="./">Home</a></li>
@@ -74,7 +78,7 @@
         </div>
         <ul class="top-widget">
             <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+            <li><i class="fa fa-envelope"></i> info@relaxo.com</li>
         </ul>
     </div>
     <!-- Offcanvas Menu Section End -->
@@ -87,7 +91,7 @@
                     <div class="col-lg-6">
                         <ul class="tn-left">
                             <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-                            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                            <li><i class="fa fa-envelope"></i> info@relaxo.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
@@ -99,16 +103,6 @@
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
                             <a href="#" class="bk-btn">Booking Now</a>
-                            <div class="language-option">
-                                <img src="img/flag.jpg" alt="">
-                                <span>EN <i class="fa fa-angle-down"></i></span>
-                                <div class="flag-dropdown">
-                                    <ul>
-                                        <li><a href="#">Zi</a></li>
-                                        <li><a href="#">Fr</a></li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,21 +143,24 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li class="row">
+                                <a id="navbarDropdown"
+                                 {{-- class="nav-link dropdown-toggle"  --}}
+                                 href="{{ route('auth.userProfile') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div 
+                                <div class="row"
                                 {{-- class="dropdown-menu dropdown-menu-end" --}}
-                                 aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                 aria-labelledby="navbarDropdown"
+                                 >
+                                    <a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                                         @csrf
                                     </form>
                                 </div>
