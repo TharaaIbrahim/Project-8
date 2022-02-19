@@ -4,37 +4,36 @@
 
 
     <!-- Contact Section Begin -->
-    <section class="contact-section spad">
+    <section class="contact-section spad" >
         <div class="container">
-            <div class="row">
+            <div class="row" style="display:flex;justify-content:center">
                 <div class="col-lg-4">
                     <div class="contact-text">
                         <h2>Contact Info</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
+                        <p >Here are the best hotel booking sites, including recommendations for international travel and for finding low-priced hotel rooms.</p>
                         <table>
                             <tbody>
                                 <tr>
                                     <td class="c-o">Address:</td>
-                                    <td>856 Cordia Extension Apt. 356, Lake, US</td>
+                                    <td>Amman</td>
                                 </tr>
                                 <tr>
                                     <td class="c-o">Phone:</td>
-                                    <td>(12) 345 67890</td>
+                                    <td>0777777777</td>
                                 </tr>
                                 <tr>
                                     <td class="c-o">Email:</td>
-                                    <td>info.colorlib@gmail.com</td>
+                                    <td>RelaxO.Hotel@gmail.com</td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td class="c-o">Fax:</td>
                                     <td>+(12) 345 67890</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="col-lg-7 offset-lg-1">
+                <!-- <div class="col-lg-7 offset-lg-1">
                     <form action="#" class="contact-form">
                         <div class="row">
                             <div class="col-lg-6">
@@ -49,7 +48,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
             </div>
             <div class="map">
                 <iframe
@@ -58,76 +57,7 @@
             </div>
         </div>
     </section>
-    <!-- Contact Section End -->
-
-    <!-- Footer Section Begin -->
-    <!-- <footer class="footer-section">
-        <div class="container">
-            <div class="footer-text">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="ft-about">
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="img/footer-logo.png" alt="">
-                                </a>
-                            </div>
-                            <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
-                            <div class="fa-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="ft-contact">
-                            <h6>Contact Us</h6>
-                            <ul>
-                                <li>(12) 345 67890</li>
-                                <li>info.colorlib@gmail.com</li>
-                                <li>856 Cordia Extension Apt. 356, Lake, United State</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="ft-newslatter">
-                            <h6>New latest</h6>
-                            <p>Get the latest updates and offers.</p>
-                            <form action="#" class="fn-form">
-                                <input type="text" placeholder="Email">
-                                <button type="submit"><i class="fa fa-send"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-option">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Environmental Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="co-text"><p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-<!-- </p></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> -->
-    <!-- Footer Section End -->
-
+    
     <!-- Search model Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
