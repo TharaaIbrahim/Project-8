@@ -75,6 +75,7 @@ class RoomController extends Controller
              $id=Auth::user()->id;
             // $room= new Room();
             $room->users()->attach($id,['check_in'=> $request->check_in,'check_out'=>$request->check_out,'phone'=>$request->phone]);
+            return redirect()->back()->with('success','This Room Booked Successfully');
         }
              
         }

@@ -191,16 +191,7 @@
                         <div class="rd-text">
                             <div class="rd-title">
                                 <h3>{{$room->name}}</h3>
-                                <div class="rdt-right">
-                                    <div class="rating">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star-half_alt"></i>
-                                    </div>
-                                    <a href="#">Booking Now</a>
-                                </div>
+                               
                             </div>
                             <h2>{{$room->price}}JD<span>/Pernight</span></h2>
                             <table>
@@ -265,7 +256,7 @@
                         </div>
                     </div> -->
                     <div class="review-add">
-                        <h4>Add Review</h4>
+                        <!-- <h4>Add Review</h4>
                         <form action="#" class="ra-form">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -275,26 +266,19 @@
                                     <input type="text" placeholder="Email*">
                                 </div>
                                 <div class="col-lg-12">
-                                    <div>
-                                        <h5>You Rating:</h5>
-                                        <div class="rating">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star-half_alt"></i>
-                                        </div>
-                                    </div>
                                     <textarea placeholder="Your Review"></textarea>
                                     <button type="submit">Submit Now</button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="room-booking">
                         <h3>Your Reservation</h3>
+                        @if(!empty(Session::get('success')))
+                           <div class="alert alert-success"> {{ Session::get('success') }}</div>
+                            @endif
                         @php
                         $datetime = date_create()->format('Y-m-d H:i:s');
                         @endphp
@@ -328,7 +312,7 @@
                             @if(!empty(Session::get('message')))
                            <div class="alert alert-success"> {{ Session::get('message') }}</div>
                             @endif
-                            <button type="submit">Check Availability</button>
+                            <button type="submit">Book Now</button>
                         </form>
                     </div>
                 </div>
