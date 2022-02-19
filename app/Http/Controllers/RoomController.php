@@ -122,4 +122,10 @@ class RoomController extends Controller
         return redirect()->back();
     }
 
+    public function bestprice()
+    {
+        $rooms = DB::table('rooms')->where('price', '<',200)->get();
+        return view('rooms.index',compact("rooms"));
+    }
+
 }
