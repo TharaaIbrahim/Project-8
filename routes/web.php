@@ -34,10 +34,11 @@ Route::get('/contact', function () {
 
 Auth::routes();
 Route::resource('/rooms',RoomController::class);
-Route::resource('/admin',AdminController::class);
 Route::resource('/user',UserController::class);
 Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book');
-
+Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
+    Route::resource('/admin',AdminController::class);
+});
 
 
 
