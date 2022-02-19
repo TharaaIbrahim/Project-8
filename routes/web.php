@@ -35,6 +35,7 @@ Auth::routes();
 Route::resource('/rooms',RoomController::class);
 
 Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book');
+// Route::get('/', [AdminController::class, 'show']);
 
 Route::get('/', [RoomController::class, 'bestprice'])->name('rooms.bestprice');
 
