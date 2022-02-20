@@ -15,10 +15,10 @@
                             </div>
                             <p>We inspire and reach millions of travelers</p>
                             <div class="fa-social">
-                                <a href="https://web.facebook.com/"><i class="fa fa-facebook"></i></a>
-                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                <a href="https://web.facebook.com/" class="pt-2"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/"  class="pt-2"><i class="fa fa-twitter"></i></a>
                                 <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
-                                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/"  class="pt-2"><i class="fa fa-instagram"></i></a>
                                 <!-- <a href="#"><i class="fa fa-youtube-play"></i></a> -->
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                         <div class="ft-contact">
                             <h6>Contact Us</h6>
                             <ul>
-                                <li>0777777777</li>
+                                <li>0777163510</li>
                                 <li>RelaxO.Hotel@gmail.com</li>
                                 <!-- <li>856 Cordia Extension Apt. 356, Lake, United State</li> -->
                             </ul>

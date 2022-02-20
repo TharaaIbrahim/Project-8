@@ -18,30 +18,72 @@ class RoomSeeder extends Seeder
         DB::table('rooms')->insert([
             [
                 'name' => 'Premium King Room',
-                'price' => '250',
-                'description' => ' is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing ',
+                'price' => '200',
+                'description' => 'Motorhome or Trailer that is the question for you. Here are some of the advantages and disadvantages of both, so you will be confident when purchasing an RV. When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth wheeler? The advantages and disadvantages of both are studied so that you can make your choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an achievement of a lifetime. It can be similar to sojourning with your residence as you search the various sites of our great land, America.
+
+                The two commonly known recreational vehicle classes are the motorized and towable. Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth wheel has the attraction of getting towed by a pickup or a car, thus giving the adaptability of possessing transportation for you when you are parked at your campsite.',
                 'capacity'=>'Max persion 3',
                 'bed'=>'King Beds',
                 'services'=>'Wifi, Television, Bathroom,...',
-                'img'=>'https://technext.github.io/sona/img/room/room-1.jpg                '
-            ], [
-                'name' => 'Premium King Room',
-                'price' => '250',
-                'description' => ' is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing ',
-                'capacity'=>'Max persion 3',
-                'bed'=>'King Beds',
-                'services'=>'Wifi, Television, Bathroom,...',
-                'img'=>'https://technext.github.io/sona/img/room/room-1.jpg                '
-            ],
+                'img'=>'https://technext.github.io/sona/img/room/room-1.jpg'
+            ], 
             [
-                'name' => 'Premium King Room',
-                'price' => '250',
-                'description' => ' is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing ',
+                'name' => 'Deluxe Room',
+                'price' => '160',
+                'description' => 'Motorhome or Trailer that is the question for you. Here are some of the advantages and disadvantages of both, so you will be confident when purchasing an RV. When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth wheeler? The advantages and disadvantages of both are studied so that you can make your choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an achievement of a lifetime. It can be similar to sojourning with your residence as you search the various sites of our great land, America.
+
+                The two commonly known recreational vehicle classes are the motorized and towable. Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth wheel has the attraction of getting towed by a pickup or a car, thus giving the adaptability of possessing transportation for you when you are parked at your campsite.',
                 'capacity'=>'Max persion 3',
                 'bed'=>'King Beds',
                 'services'=>'Wifi, Television, Bathroom,...',
-                'img'=>'https://technext.github.io/sona/img/room/room-1.jpg                '
-            ],
+                'img'=>'https://technext.github.io/sona/img/room/room-2.jpg'
+            ], 
+            [
+                'name' => 'Double Room',
+                'price' => '160',
+                'description' => 'Motorhome or Trailer that is the question for you. Here are some of the advantages and disadvantages of both, so you will be confident when purchasing an RV. When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth wheeler? The advantages and disadvantages of both are studied so that you can make your choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an achievement of a lifetime. It can be similar to sojourning with your residence as you search the various sites of our great land, America.
+
+                The two commonly known recreational vehicle classes are the motorized and towable. Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth wheel has the attraction of getting towed by a pickup or a car, thus giving the adaptability of possessing transportation for you when you are parked at your campsite.',
+                'capacity'=>'Max persion 3',
+                'bed'=>'King Beds',
+                'services'=>'Wifi, Television, Bathroom,...',
+                'img'=>'https://technext.github.io/sona/img/room/room-3.jpg'
+            ], 
+            [
+                'name' => 'Luxury Room',
+                'price' => '160',
+                'description' => 'Motorhome or Trailer that is the question for you. Here are some of the advantages and disadvantages of both, so you will be confident when purchasing an RV. When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth wheeler? The advantages and disadvantages of both are studied so that you can make your choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an achievement of a lifetime. It can be similar to sojourning with your residence as you search the various sites of our great land, America.
+
+                The two commonly known recreational vehicle classes are the motorized and towable. Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth wheel has the attraction of getting towed by a pickup or a car, thus giving the adaptability of possessing transportation for you when you are parked at your campsite.',
+                'capacity'=>'Max persion 3',
+                'bed'=>'King Beds',
+                'services'=>'Wifi, Television, Bathroom,...',
+                'img'=>'https://technext.github.io/sona/img/room/room-4.jpg'
+            ], 
+            [
+                'name' => 'Room With View',
+                'price' => '160',
+                'description' => 'Motorhome or Trailer that is the question for you. Here are some of the advantages and disadvantages of both, so you will be confident when purchasing an RV. When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth wheeler? The advantages and disadvantages of both are studied so that you can make your choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an achievement of a lifetime. It can be similar to sojourning with your residence as you search the various sites of our great land, America.
+
+                The two commonly known recreational vehicle classes are the motorized and towable. Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth wheel has the attraction of getting towed by a pickup or a car, thus giving the adaptability of possessing transportation for you when you are parked at your campsite.',
+                'capacity'=>'Max persion 3',
+                'bed'=>'King Beds',
+                'services'=>'Wifi, Television, Bathroom,...',
+                'img'=>'https://technext.github.io/sona/img/room/room-5.jpg'
+            ], 
+            [
+                'name' => 'Small View',
+                'price' => '160',
+                'description' => 'Motorhome or Trailer that is the question for you. Here are some of the advantages and disadvantages of both, so you will be confident when purchasing an RV. When comparing Rvs, a motorhome or a travel trailer, should you buy a motorhome or fifth wheeler? The advantages and disadvantages of both are studied so that you can make your choice wisely when purchasing an RV. Possessing a motorhome or fifth wheel is an achievement of a lifetime. It can be similar to sojourning with your residence as you search the various sites of our great land, America.
+
+                The two commonly known recreational vehicle classes are the motorized and towable. Towable rvs are the travel trailers and the fifth wheel. The rv travel trailer or fifth wheel has the attraction of getting towed by a pickup or a car, thus giving the adaptability of possessing transportation for you when you are parked at your campsite.',
+                'capacity'=>'Max persion 3',
+                'bed'=>'King Beds',
+                'services'=>'Wifi, Television, Bathroom,...',
+                'img'=>'https://technext.github.io/sona/img/room/room-6.jpg'
+            ], 
+
+
         ]);
     }
 }

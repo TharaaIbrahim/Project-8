@@ -90,7 +90,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i>0777777777</li>
+                            <li><i class="fa fa-phone"></i>0777163510</li>
                             <li><i class="fa fa-envelope"></i> RelaxO.Hotel@gmail.com</li>
                         </ul>
                     </div>
@@ -139,7 +139,7 @@
                                     <li><a href="/contact">Contact</a></li>
                                     
                     <!-- Right Side Of Navbar -->
-                    <ul class="row">
+                    <ul class="row ml-5 pl-5" style="padding-left: 12em!important">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -161,10 +161,10 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
-                                <div class="row"
+                                {{-- <div class="row" --}}
                                 {{-- class="dropdown-menu dropdown-menu-end" --}}
-                                 aria-labelledby="navbarDropdown"
-                                 >
+                                 {{-- aria-labelledby="navbarDropdown"
+                                 > --}}
                                     <a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -174,15 +174,12 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                                         @csrf
                                     </form>
-                                </div>
+                                {{-- </div> --}}
                             </li>
                         @endguest
                     </ul>
                                 </ul>
                             </nav>
-                            <div class="nav-right search-switch">
-                                <i class="icon_search"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
