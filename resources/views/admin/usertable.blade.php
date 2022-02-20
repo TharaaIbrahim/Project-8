@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,70 +13,61 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
-      @extends('layouts.dashboard');
+    @extends('layouts.dashboard');
             
             @section('content')
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4" style="margin-bottom:2%;">Rooms Table</h1>
+                        <h1 class="mt-4" style="margin-bottom:2%;">Users Table</h1>
                         <div class="card mb-4" style="border:none;">
-                       <button  style="width:20%" class="create"><a class="dropdown-item" href="{{route('rooms.create')}}">Create Room</a></button>
+                       <button class="create" style="width:20%"><a class="dropdown-item" href="{{route('user.create')}}" >Create User</a></button>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Rooms
+                                Users
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                             <th>name</th>
-                                            <th>price</th>
-                                            <th>description</th>
-                                            <th>capacity</th>
-                                            <th>bed </th>
-                                            <th>services</th>
-                                            <th>image room</th>
-                                            <th>Edit</th>
-                                            <th>delete</th>
+                                            <th>email</th>
+                                            <th>phone</th>
+                                            <th>password</th>
+                                            <th>is_admin </th>
+                                          
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                         <th>name</th>
-                                            <th>price</th>
-                                            <th>description</th>
-                                            <th>capacity</th>
-                                            <th>bed </th>
-                                            <th>services</th>
-                                            <th>image room</th>
-                                            <th>Edit</th>
-                                            <th>delete</th>
+                                            <th>email</th>
+                                            <th>phone</th>
+                                            <th>password</th>
+                                            <th>is_admin </th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        @foreach($rooms as $room)
+                                        @foreach($users as $user)
                                         <tr>
-                                            <td>{{$room->name}}</td>   
-                                            <td>{{$room->price}}</td>
-                                            <td>{{$room->description}}</td>
-                                            <td>{{$room->capacity}}</td>
-                                            <td>{{$room->bed}}</td>
-                                            <td>{{$room->services}}</td>
-                                            <td><img src="{{$room->img}}" alt="{{$room->name}}"/></td>
-                                            <td><button class="edit"  style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white"href="{{route('rooms.edit',$room->id)}}">edit</a></button></td>
+                                            <td>{{$user->name}}</td>   
+                                            <td>{{$user->email}}</td>
+                                            <td>{{$user->phone}}</td>
+                                            <td>{{$user->password}}</td>
+                                            <td>{{$user->role}}</td>
+                                          
+                                            <td><button class="edit" style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                           
                                             <td>
-                                            <form method="POST" action="{{route('rooms.destroy',$room->id)}}">
+                                            <form method="POST" action="{{route('user.destroy',$user->id)}}">
                                              @csrf
                                              @method('delete')
 
-                                          <button type="submit" class="delete" style="background-color:red !important;color:white;border:none;padding:0.5rem;border-radius:3px">delete</button>
+                                         <button  style="background-color:red !important;color:white;border:none;padding:0.5rem;border-radius:3px" type="submit" class="delete">delete</button>
                                        </form>
                                     </td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>
