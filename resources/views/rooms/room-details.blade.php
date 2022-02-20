@@ -27,96 +27,35 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Offcanvas Menu Section Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="canvas-open">
-        <i class="icon_menu"></i>
-    </div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <i class="icon_close"></i>
-        </div>
-        <div class="search-icon search-switch">
-            <i class="icon_search"></i>
-        </div>
-        <div class="header-configure-area">
-            <div class="language-option">
-                <img src="img/flag.jpg" alt="">
-                <span>EN <i class="fa fa-angle-down"></i></span>
-                <div class="flag-dropdown">
-                    <ul>
-                        <li><a href="#">Zi</a></li>
-                        <li><a href="#">Fr</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="bk-btn">Booking Now</a>
-        </div>
-        <nav class="mainmenu mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
-                <li><a href="./pages.html">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./room-details.html">Room Details</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                        <li><a href="#">Family Room</a></li>
-                        <li><a href="#">Premium Room</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="top-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-tripadvisor"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-        <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
-        </ul>
-    </div>
-    <!-- Offcanvas Menu Section End -->
-
-    <!-- Header Section Begin -->
-    <header class="header-section header-normal">
+     <!-- Header Section Begin -->
+     <header class="header-section">
         <div class="top-nav">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <ul class="tn-left">
-                            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-                            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                            <li><i class="fa fa-phone"></i>0777163510</li>
+                            <li><i class="fa fa-envelope"></i> RelaxO.Hotel@gmail.com</li>
                         </ul>
                     </div>
                     <div class="col-lg-6">
                         <div class="tn-right">
                             <div class="top-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="https://web.facebook.com/"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                                <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Booking Now</a>
+                            <a href="/rooms" class="bk-btn">Booking Now</a>
                             <div class="language-option">
-                                <img src="img/flag.jpg" alt="">
-                                <span>EN <i class="fa fa-angle-down"></i></span>
+                                <img src="img/jordan.jpg" alt="">
+                                <!-- <span>EN <i class="fa fa-angle-down"></i></span>
                                 <div class="flag-dropdown">
                                     <ul>
                                         <li><a href="#">Zi</a></li>
                                         <li><a href="#">Fr</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -128,40 +67,69 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <a href="./index.html">
-                                <img src="img/logo.png" alt="">
+                            <a href="/">
+                                <!-- <img src="img/logo.png" alt=""> -->
+                                <h2 style="font-family: 'Lora', serif">RelaxO<span style="color: #dfa974;">.</span></h2>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-10">
                         <div class="nav-menu">
-                            <nav class="mainmenu">
-                                <ul>
-                                    <li><a href="./index.html">Home</a></li>
-                                    <li class="active"><a href="./rooms.html">Rooms</a></li>
-                                    <li><a href="./about-us.html">About Us</a></li>
-                                    <li><a href="./pages.html">Pages</a>
-                                        <ul class="dropdown">
-                                            <li><a href="./room-details.html">Room Details</a></li>
-                                            <li><a href="./blog-details.html">Blog Details</a></li>
-                                            <li><a href="#">Family Room</a></li>
-                                            <li><a href="#">Premium Room</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="./blog.html">News</a></li>
-                                    <li><a href="./contact.html">Contact</a></li>
+                            <nav class="mainmenu row">
+                                <ul class="row">
+                                    <li class="active"><a href="/">Home</a></li>
+                                    <li><a href="/rooms">Rooms</a></li>
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/contact">Contact</a></li>
+                                    
+                    <!-- Right Side Of Navbar -->
+                    <ul class="row ml-5 pl-5" style="padding-left: 12em!important">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="row">
+                                <a id="navbarDropdown"
+                                 {{-- class="nav-link dropdown-toggle"  --}}
+                                 href="{{ route('auth.userProfile') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                {{-- <div class="row" --}}
+                                {{-- class="dropdown-menu dropdown-menu-end" --}}
+                                 {{-- aria-labelledby="navbarDropdown"
+                                 > --}}
+                                    <a  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                                        @csrf
+                                    </form>
+                                {{-- </div> --}}
+                            </li>
+                        @endguest
+                    </ul>
                                 </ul>
                             </nav>
-                            <div class="nav-right search-switch">
-                                <i class="icon_search"></i>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Header End -->
 
     <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
@@ -321,7 +289,7 @@
     </section>
     <!-- Room Details Section End -->
 
-    <!-- Footer Section Begin -->
+
     <footer class="footer-section">
         <div class="container">
             <div class="footer-text">
@@ -330,16 +298,18 @@
                         <div class="ft-about">
                             <div class="logo">
                                 <a href="#">
-                                    <img src="img/footer-logo.png" alt="">
+                                    <!-- <img src="img/footer-logo.png" alt=""> -->
+                                <h2 style="font-family: 'Lora', serif;color:white">RelaxO<span style="color: #dfa974;">.</span></h2>
+    
                                 </a>
                             </div>
-                            <p>We inspire and reach millions of travelers<br /> across 90 local websites</p>
+                            <p>We inspire and reach millions of travelers</p>
                             <div class="fa-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="https://web.facebook.com/" class="pt-2"><i class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/"  class="pt-2"><i class="fa fa-twitter"></i></a>
+                                <!-- <a href="#"><i class="fa fa-tripadvisor"></i></a> -->
+                                <a href="https://www.instagram.com/"  class="pt-2"><i class="fa fa-instagram"></i></a>
+                                <!-- <a href="#"><i class="fa fa-youtube-play"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -347,9 +317,9 @@
                         <div class="ft-contact">
                             <h6>Contact Us</h6>
                             <ul>
-                                <li>(12) 345 67890</li>
-                                <li>info.colorlib@gmail.com</li>
-                                <li>856 Cordia Extension Apt. 356, Lake, United State</li>
+                                <li>0777163510</li>
+                                <li>RelaxO.Hotel@gmail.com</li>
+                                <!-- <li>856 Cordia Extension Apt. 356, Lake, United State</li> -->
                             </ul>
                         </div>
                     </div>
@@ -371,16 +341,16 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Terms of use</a></li>
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Environmental Policy</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <!-- <li><a href="#">Terms of use</a></li> -->
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/rooms">Rooms</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-5">
                         <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
                     </div>
                 </div>
             </div>
