@@ -67,6 +67,7 @@ class AdminController extends Controller
      */
     public function show(admin $admin)
     {
+        $reservations= DB::table('room_user')->get();
         $reservations= DB::table('users')->select([
             'users.id',
             'users.name',

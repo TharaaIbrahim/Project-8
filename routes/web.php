@@ -35,7 +35,7 @@ Auth::routes();
 Route::resource('/rooms',RoomController::class);
 
 Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book');
-// Route::get('/', [AdminController::class, 'show']);
+
 
 Route::get('/', [RoomController::class, 'bestprice'])->name('rooms.bestprice');
 
@@ -43,6 +43,7 @@ Route::get('/', [RoomController::class, 'bestprice'])->name('rooms.bestprice');
 Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('/admin',AdminController::class);
     Route::resource('/user',UserController::class);
+    Route::get('/', [AdminController::class, 'show'])->name('admins.show');
 });
 
 Route::group(['middleware'=>['auth']],function(){
