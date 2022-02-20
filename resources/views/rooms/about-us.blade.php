@@ -27,9 +27,9 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="ap-title">
-                            <h2>Welcome To Sona.</h2>
-                            <p>Built in 1910 during the Belle Epoque period, this hotel is located in the center of
-                                Paris, with easy access to the city’s tourist attractions. It offers tastefully
+                            <h2>Welcome To RelxO.</h2>
+                            <p>Built in 2010 , this hotel is located in the center of
+                                Amman, with easy access to the city’s tourist attractions. It offers tastefully
                                 decorated rooms.</p>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                     <div class="video-text">
                         <h2>Discover Our Hotel & Services.</h2>
                         <p>It S Hurricane Season But We Are Visiting Hilton Head Island</p>
-                        <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><img
+                        <a href="https://www.youtube.com/watch?v=2Xq66M3_jU8" class="play-btn video-popup"><img
                                 src="img/play.png" alt=""></a>
                     </div>
                 </div>
