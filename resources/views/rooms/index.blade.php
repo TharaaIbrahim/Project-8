@@ -130,8 +130,8 @@
             <div class="hp-room-items" >
                 <h2 style="text-align: center;margin-bottom:2em">Best Rooms</h2>
                 <div class="row" >
-                    @foreach($rooms as $room)
-                    <div class="col-lg-3 col-md-6">
+                    @foreach($rooms->take(4) as $room)
+                    <div class="col-lg-3 col-md-6" style="margin: 0!important;padding: 0!important">
                         <div class="hp-room-item set-bg" data-setbg="{{$room->img}}">
                             <div class="hr-text">
                                 <h3>{{$room->name}}</h3>
