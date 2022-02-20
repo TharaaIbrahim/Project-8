@@ -21,8 +21,8 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4" style="margin-bottom:2%;">Rooms Table</h1>
-                        <div class="card mb-4">
-                       <button class="create"><a class="dropdown-item" href="{{route('rooms.create')}}">Create Room</a></button>
+                        <div class="card mb-4" style="border:none;">
+                       <button  style="width:20%" class="create"><a class="dropdown-item" href="{{route('rooms.create')}}">Create Room</a></button>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -67,14 +67,14 @@
                                             <td>{{$room->bed}}</td>
                                             <td>{{$room->services}}</td>
                                             <td><img src="{{$room->img}}" alt="{{$room->name}}"/></td>
-                                            <td><button class="edit"><a href="{{route('rooms.edit',$room->id)}}">edit</a></button></td>
+                                            <td><button class="edit"  style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white"href="{{route('rooms.edit',$room->id)}}">edit</a></button></td>
                                           
                                             <td>
                                             <form method="POST" action="{{route('rooms.destroy',$room->id)}}">
                                              @csrf
                                              @method('delete')
 
-                                          <button type="submit" class="delete">delete</button>
+                                          <button type="submit" class="delete" style="background-color:red !important;color:white;border:none;padding:0.5rem;border-radius:3px">delete</button>
                                        </form>
                                     </td>
 

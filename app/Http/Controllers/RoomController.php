@@ -70,10 +70,15 @@ class RoomController extends Controller
                  return redirect()->back()->with('message','this date is already booked');
                  break;
            
-        }}
+        }
+        if($request->check_out<$request->check_in){
+            $error=true;
+            return redirect()->back()->with('message','Unvalid Checkout Booking');
+            break;
+        }
+    }
         if(!$error){
              $id=Auth::user()->id;
-            // $room= new Room();
             $room->users()->attach($id,['check_in'=> $request->check_in,'check_out'=>$request->check_out,'phone'=>$request->phone]);
             return redirect()->back()->with('success','This Room Booked Successfully');
         }

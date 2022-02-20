@@ -20,8 +20,8 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4" style="margin-bottom:2%;">Users Table</h1>
-                        <div class="card mb-4">
-                       <button class="create"><a class="dropdown-item" href="{{route('user.create')}}">Create User</a></button>
+                        <div class="card mb-4" style="border:none;">
+                       <button class="create" style="width:20%"><a class="dropdown-item" href="{{route('user.create')}}" >Create User</a></button>
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -58,14 +58,14 @@
                                             <td>{{$user->password}}</td>
                                             <td>{{$user->role}}</td>
                                           
-                                            <td><button class="edit"><a href="{{route('user.edit',$user->id)}}">edit</a></button></td>
+                                            <td><button class="edit" style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                           
                                             <td>
                                             <form method="POST" action="{{route('user.destroy',$user->id)}}">
                                              @csrf
                                              @method('delete')
 
-                                         <button type="submit" class="delete">delete</button>
+                                         <button  style="background-color:red !important;color:white;border:none;padding:0.5rem;border-radius:3px" type="submit" class="delete">delete</button>
                                        </form>
                                     </td>
                                         </tr>

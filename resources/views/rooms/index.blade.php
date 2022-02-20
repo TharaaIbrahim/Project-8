@@ -134,21 +134,21 @@
                     <div class="col-lg-3 col-md-6" style="margin: 0!important;padding: 0!important">
                         <div class="hp-room-item set-bg" data-setbg="{{$room->img}}">
                             <div class="hr-text">
-                                <h3>{{$room->name}}</h3>
-                                <h2>{{$room->price}}<span>/Pernight</span></h2>
+                                <h3 >{{$room->name}}</h3>
+                                <h2 >{{$room->price}}<span>/Pernight</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
-                                            <td class="r-o">Capacity:</td>
-                                            <td>{{$room->capacity}}</td>
+                                            <td   class="r-o">Capacity:</td>
+                                            <td >{{$room->capacity}}</td>
                                         </tr>
                                         <tr>
-                                            <td class="r-o">Bed:</td>
-                                            <td>{{$room->bed}}</td>
+                                            <td  class="r-o">Bed:</td>
+                                            <td >{{$room->bed}}</td>
                                         </tr>
                                         <tr>
-                                            <td class="r-o">Services:</td>
-                                            <td>{{$room->services}}</td>
+                                            <td  class="r-o">Services:</td>
+                                            <td >{{$room->services}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
