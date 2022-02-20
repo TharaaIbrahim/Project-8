@@ -60,6 +60,11 @@ class RoomController extends Controller
     public function book(Request $request,Room $room)
     {   
         if (Auth::check()) {
+            if($request->check_out<$request->check_in){
+            $error=true;
+            return redirect()->back()->with('message','Unvalid Checkout Booking');
+            
+        }else{
         $rooms = DB::table('room_user')->where('room_id', $room->id)->get();
         $error=false;
         foreach($rooms as $single){
@@ -67,15 +72,13 @@ class RoomController extends Controller
             $out=$single->check_out;
              if(($request->check_in >= $in && $request->check_in <= $out ) || ($request->check_out >= $in && $request->check_out <= $out) || ($request->check_in <= $in && $request->check_out >= $out ) ){
                  $error=true;
-                 return redirect()->back()->with('message','this date is already booked');
+                 return redirect()->back()->with('message','This Date is Already Booked');
                  break;
            
         }
-        if($request->check_out<$request->check_in){
-            $error=true;
-            return redirect()->back()->with('message','Unvalid Checkout Booking');
-            break;
         }
+       
+        
     }
         if(!$error){
              $id=Auth::user()->id;

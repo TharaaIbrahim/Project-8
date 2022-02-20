@@ -56,15 +56,15 @@
                         @csrf
                             <div class="check-date">
                                 <label for="date-in">Check In:</label>
-                                <input type="date"  min=<?php echo $datetime ?> id="date-in" name="check_in">
+                                <input type="date"  min=<?php echo $datetime ?> id="date-in" name="check_in" required>
                             </div>
                             <div class="check-date">
                                 <label for="date-out">Check Out:</label>
-                                <input type="date" min=<?php echo $datetime ?>  id="date-out" name="check_out">
+                                <input type="date" min=<?php echo $datetime ?>  id="date-out" name="check_out" required>
                             </div>
                             <div class="check-date">
                                 <label for="phone">Phone:</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" required>
                                 <i class="icon_phone"></i>
                             </div>
                           
