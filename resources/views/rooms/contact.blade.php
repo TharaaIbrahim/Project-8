@@ -6,7 +6,7 @@
     <!-- Contact Section Begin -->
     <section class="contact-section spad" >
         <div class="container">
-            <div class="row" style="display:flex;justify-content:center">
+            <!-- <div class="row" style="display:flex;justify-content:center">
                 <div class="col-lg-4">
                     <div class="contact-text">
                         <h2>Contact Info</h2>
@@ -25,16 +25,34 @@
                                     <td class="c-o">Email:</td>
                                     <td>RelaxO.Hotel@gmail.com</td>
                                 </tr>
-                                <!-- <tr>
-                                    <td class="c-o">Fax:</td>
-                                    <td>+(12) 345 67890</td>
-                                </tr> -->
                             </tbody>
                         </table>
                     </div>
                 </div>
                 
-            </div>
+            </div> -->
+            <section class="aboutus-page-section spad">
+      
+            <div class="about-page-text">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ap-title">
+                            <h2>Contact Info</h2>
+                            <p>Here are the best hotel booking sites, including recommendations for international travel and for finding low-priced hotel rooms.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <ul class="ap-services">
+                            <li><i class="icon_check"></i>Address: Amman </li>
+                            <li><i class="icon_check"></i>Phone: 0777777777</li>
+                            <li><i class="icon_check"></i>Email: RelaxO.Hotel@gmail.com</li>
+                            <!-- <li><i class="icon_check"></i> Free Wifi.</li> -->
+                            <!-- <li><i class="icon_check"></i> Discount 20% On F&B</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+    </section>
             <div class="map">
                 <iframe
                 src="https://maps.google.com/maps?q=amman%20jordan&t=&z=13&ie=UTF8&iwloc=&output=embed"
