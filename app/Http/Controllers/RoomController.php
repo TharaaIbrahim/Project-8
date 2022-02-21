@@ -150,9 +150,9 @@ class RoomController extends Controller
     public function search(Request $request)
     {
         $rooms = Room::query()
-        ->where('name', 'LIKE', "%{$request->search}%")
-        ->orWhere('price', 'LIKE', "%{$request->search}%")
-        ->orWhere('capacity', 'LIKE', "%{$request->search}%")
+        ->where('name', 'LIKE', "%{$request->roomType}%")
+        ->whereBetween('price',  [$request->fromPrice,$request->toPrice])
+        ->Where('capacity', 'LIKE', "%{$request->personsNum}%")
         ->get();
         if(empty($rooms)){
             return redirect()->back()->with('search','No Results Found');

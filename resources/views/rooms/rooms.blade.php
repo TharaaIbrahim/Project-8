@@ -14,8 +14,15 @@
                         </div>
                         <div class="row search" style=" width:100%;margin:2% auto 0% auto;">
                        <form method="GET" action="{{route('rooms.search')}}" style="display:flex;justify-content:center">
-                      <input style="width:100%!important;margin-right:1rem;" type="text" name="search" value="" placeholder="Search" class="form-control" id="search" />
-                     <button type="submit" style="background-color:#dea973;color:white" class="btn btn">Search</button>
+                       <label style="align-self:center;">Room:</label>
+                      <input style="width:100%!important;margin-right:1rem;height: 50px;" type="text" name="roomType" value="" placeholder="DELUXE,PREMIUM..." class="form-control" id="search" required />
+                      <label  style="align-self:center;">Persons:</label>
+                      <input style="width:100%!important;margin-right:1rem;height: 50px;" type="text" name="personsNum" value="" placeholder="1,2,3" class="form-control" id="search" required/>
+                      <label  style="align-self:center;">Price:</label>
+                      <input style="width:100%!important;margin-right:1rem;height: 50px;" type="text" name="fromPrice" value="" placeholder="From" class="form-control" id="search" required/>
+                      <label  style="align-self:center;">Price:</label>
+                      <input style="width:100%!important;margin-right:1rem;height: 50px;" type="text" name="toPrice" value="" placeholder="To" class="form-control" id="search" required/>
+                     <button type="submit" style="background-color:#dea973;color:white;height: 50px;" class="btn btn">Search</button>
                       </div>
                     </div>
                 </div>
