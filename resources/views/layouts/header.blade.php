@@ -41,7 +41,7 @@
                color: #dfa974;
            }
            .showRoom:hover{
-            background-image: linear-gradient(black, #dea973 ) !important;
+            background-image: linear-gradient(#d5dee3, #dea973 ) !important;
            }
            .search{
                width:20%;
