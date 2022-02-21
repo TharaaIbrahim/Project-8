@@ -9,6 +9,17 @@
                 <div class="col-lg-8">
                     <div class="room-details-item">
                         <img src="{{$room->img}}" alt="{{$room->name}}">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{{$room->img}}" alt="{{$room->name}}">
+                            </div> 
+                            <div class="col-4">
+                                <img src="{{$room->img2}}" alt="{{$room->name}}">
+                            </div>
+                            <div class="col-4">
+                                <img src="{{$room->img3}}" alt="{{$room->name}}">
+                            </div>
+                        </div>
                         <div class="rd-text">
                             <div class="rd-title">
                                 <h3>{{$room->name}}</h3>
@@ -81,6 +92,8 @@
                     </div>
                 </div>
             </div>
+
+           
         </div>
     </section>
 

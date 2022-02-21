@@ -22,6 +22,8 @@ class CreateRoomsTable extends Migration
             $table->text('bed');
             $table->text('services');
             $table->text('img');
+            $table->text('img2');
+            $table->text('img3');
             $table->timestamps();
         });
     }
