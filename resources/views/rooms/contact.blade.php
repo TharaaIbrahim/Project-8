@@ -6,32 +6,8 @@
     <!-- Contact Section Begin -->
     <section class="contact-section spad" >
         <div class="container">
-            <!-- <div class="row" style="display:flex;justify-content:center">
-                <div class="col-lg-4">
-                    <div class="contact-text">
-                        <h2>Contact Info</h2>
-                        <p >Here are the best hotel booking sites, including recommendations for international travel and for finding low-priced hotel rooms.</p>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="c-o">Address:</td>
-                                    <td>Amman</td>
-                                </tr>
-                                <tr>
-                                    <td class="c-o">Phone:</td>
-                                    <td>0777777777</td>
-                                </tr>
-                                <tr>
-                                    <td class="c-o">Email:</td>
-                                    <td>RelaxO.Hotel@gmail.com</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                
-            </div> -->
-            <section class="aboutus-page-section spad">
+      
+            <section class="aboutus-page-section spad" style="padding-bottom: 0px ;">
       
             <div class="about-page-text">
                 <div class="row">
@@ -46,8 +22,7 @@
                             <li><i class="icon_check"></i>Address: Amman </li>
                             <li><i class="icon_check"></i>Phone: 0777777777</li>
                             <li><i class="icon_check"></i>Email: RelaxO.Hotel@gmail.com</li>
-                            <!-- <li><i class="icon_check"></i> Free Wifi.</li> -->
-                            <!-- <li><i class="icon_check"></i> Discount 20% On F&B</li> -->
+                            
                         </ul>
                     </div>
                 </div>
