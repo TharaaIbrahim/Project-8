@@ -12,9 +12,9 @@
                             <a href="./home.html">Home</a>
                             <span>Rooms</span>
                         </div>
-                        <div class="row search">
-                       <form method="GET" action="{{route('rooms.search')}}" style="display:flex;justify-content:center;">
-                      <input style="width:100%;margin-right:1rem;" type="text" name="search" value="" placeholder="Search" class="form-control" id="search" />
+                        <div class="row search" style=" width:100%;margin:2% auto 0% auto;">
+                       <form method="GET" action="{{route('rooms.search')}}" style="display:flex;justify-content:center">
+                      <input style="width:100%!important;margin-right:1rem;" type="text" name="search" value="" placeholder="Search" class="form-control" id="search" />
                      <button type="submit" style="background-color:#dea973;color:white" class="btn btn">Search</button>
                       </div>
                     </div>
