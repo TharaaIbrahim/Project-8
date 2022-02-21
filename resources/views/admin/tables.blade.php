@@ -66,7 +66,7 @@
                                             <td>{{$room->capacity}}</td>
                                             <td>{{$room->bed}}</td>
                                             <td>{{$room->services}}</td>
-                                            <td><img src="{{$room->img}}" alt="{{$room->name}}"/></td>
+                                            <td><img src="{{$room->img}}" alt="{{$room->name}}" width="300vw"/></td>
                                             <td><button class="edit"  style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white"href="{{route('rooms.edit',$room->id)}}">edit</a></button></td>
                                           
                                             <td>
