@@ -40,6 +40,14 @@
            .nav-link-faded:hover{
                color: #dfa974;
            }
+           .showRoom:hover{
+            background-image: linear-gradient(black, #dea973 ) !important;
+           }
+           .search{
+               width:20%;
+               margin:5% auto 0% auto ;
+           }
+         
      </style>
 </head>
 

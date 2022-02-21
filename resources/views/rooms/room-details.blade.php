@@ -19,7 +19,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="r-o">Capacity:</td>
-                                        <td>{{$room->capacity}}</td>
+                                        <td>Max Person {{$room->capacity}}</td>
                                     </tr>
                                     <tr>
                                         <td class="r-o">Bed:</td>
@@ -62,14 +62,19 @@
                                 <label for="date-out">Check Out:</label>
                                 <input type="date" min=<?php echo $datetime ?>  id="date-out" name="check_out" required>
                             </div>
+                          
                             <div class="check-date">
-                                <label for="phone">Phone:</label>
+                                <label for="user">Phone:</label>
                                 <input type="tel" id="phone" name="phone" required>
                                 <i class="icon_phone"></i>
                             </div>
-                          
+                            <div class="check-date">
+                                <label for="number">Persons</label>
+                                <input type="number" id="number" name="number" required>
+                               
+                            </div>
                             @if(!empty(Session::get('message')))
-                           <div class="alert alert-success"> {{ Session::get('message') }}</div>
+                           <div class="alert alert-danger"> {{ Session::get('message') }}</div>
                             @endif
                             <button type="submit">Book Now</button>
                         </form>

@@ -12,6 +12,11 @@
                             <a href="./home.html">Home</a>
                             <span>Rooms</span>
                         </div>
+                        <div class="row search">
+                       <form method="GET" action="{{route('rooms.search')}}" style="display:flex;justify-content:center;">
+                      <input style="width:100%;margin-right:1rem;" type="text" name="search" value="" placeholder="Search" class="form-control" id="search" />
+                     <button type="submit" style="background-color:#dea973;color:white" class="btn btn">Search</button>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -23,9 +28,8 @@
     <section class="rooms-section spad">
         <div class="container">
             <div class="row">
-            @foreach($rooms as $room)
+                      @foreach($rooms as $room)
                 <div class="col-lg-4 col-md-6">
-                
                     <div class="room-item">
                         <img src="{{$room->img}}" alt="{{$room->name}}">
                         <div class="ri-text">
@@ -35,7 +39,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="r-o">Capacity:</td>
-                                        <td>{{$room->capacity}}</td>
+                                        <td>Max Person {{$room->capacity}}</td>
                                     </tr>
                                     <tr>
                                         <td class="r-o">Bed:</td>
@@ -53,6 +57,8 @@
                   
                 </div>
                 @endforeach
+            
+          
               
             </div>
         </div>

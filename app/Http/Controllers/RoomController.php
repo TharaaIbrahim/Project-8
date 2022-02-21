@@ -58,15 +58,24 @@ class RoomController extends Controller
     }
 
     public function book(Request $request,Room $room)
-    {   
+    {  
+         $roomS=DB::table('rooms')->where('id', $room->id)->first();
+
         if (Auth::check()) {
             if($request->check_out<$request->check_in){
             $error=true;
             return redirect()->back()->with('message','Unvalid Checkout Booking');
             
-        }else{
+        }else if($roomS->capacity !== $request->number){
+             
+            $error=true;
+            return redirect()->back()->with('message','Max Capacity'." ".$roomS->capacity);
+            
+        }
+        else{
         $rooms = DB::table('room_user')->where('room_id', $room->id)->get();
         $error=false;
+       
         foreach($rooms as $single){
             $in=$single->check_in;
             $out=$single->check_out;
@@ -82,7 +91,7 @@ class RoomController extends Controller
     }
         if(!$error){
              $id=Auth::user()->id;
-            $room->users()->attach($id,['check_in'=> $request->check_in,'check_out'=>$request->check_out,'phone'=>$request->phone]);
+            $room->users()->attach($id,['check_in'=> $request->check_in,'check_out'=>$request->check_out,'phone'=>$request->phone,'persons'=>$request->number]);
             return redirect()->back()->with('success','This Room Booked Successfully');
         }
              
@@ -128,13 +137,29 @@ class RoomController extends Controller
     public function destroy(Room $room)
     {   
         $room->delete(); 
-        return redirect()->back();
+        $rooms=Room::all();
+        return view('admin.tables',compact("rooms"));
     }
 
     public function bestprice()
     {
         $rooms = DB::table('rooms')->where('price', '<',200)->get();
         return view('rooms.index',compact("rooms"));
+    }
+
+    public function search(Request $request)
+    {
+        $rooms = Room::query()
+        ->where('name', 'LIKE', "%{$request->search}%")
+        ->orWhere('price', 'LIKE', "%{$request->search}%")
+        ->orWhere('capacity', 'LIKE', "%{$request->search}%")
+        ->get();
+        if(empty($rooms)){
+            return redirect()->back()->with('search','No Results Found');
+        }else{
+              return view('rooms.rooms',compact("rooms"));
+        }
+      
     }
 
 }

@@ -39,7 +39,7 @@
                             travel. Every day, we inspire and reach millions of travelers across 90 local websites in 41
                             languages.</p>
                         <p class="s-para">So when it comes to booking the perfect hotel, we’ve got you covered.</p>
-                        <a href="#" class="primary-btn about-btn">Read More</a>
+                        <a href="/about" class="primary-btn about-btn">Read More</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -131,16 +131,16 @@
                 <h2 style="text-align: center;margin-bottom:2em">Best Rooms</h2>
                 <div class="row" >
                     @foreach($rooms->take(4) as $room)
-                    <div class="col-lg-3 col-md-6" style="margin: 0!important;padding: 0!important">
-                        <div class="hp-room-item set-bg" data-setbg="{{$room->img}}">
+                    <div class="col-lg-3 col-md-6 ">
+                        <div class="hp-room-item set-bg showRoom"  data-setbg="{{$room->img}}">
                             <div class="hr-text">
                                 <h3 >{{$room->name}}</h3>
-                                <h2 >{{$room->price}}<span>/Pernight</span></h2>
+                                <h2 >{{$room->price}}JD<span>/Pernight</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td   class="r-o">Capacity:</td>
-                                            <td >{{$room->capacity}}</td>
+                                            <td >Max Person {{$room->capacity}}</td>
                                         </tr>
                                         <tr>
                                             <td  class="r-o">Bed:</td>

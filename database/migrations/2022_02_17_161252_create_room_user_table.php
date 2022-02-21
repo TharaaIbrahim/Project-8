@@ -22,6 +22,7 @@ class CreateRoomUserTable extends Migration
             $table->datetime('check_in');
             $table->datetime('check_out');
             $table->text('phone');
+            $table->integer('persons');
             $table->timestamps();
         });
     }

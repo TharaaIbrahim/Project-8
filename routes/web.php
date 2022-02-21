@@ -38,7 +38,7 @@ Route::post('/rooms/{room}', [RoomController::class, 'book'])->name('rooms.book'
 
 
 Route::get('/', [RoomController::class, 'bestprice'])->name('rooms.bestprice');
-
+Route::get('/search', [RoomController::class, 'search'])->name('rooms.search');
 
 Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('/admin',AdminController::class);
