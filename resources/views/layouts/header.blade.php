@@ -57,39 +57,7 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Offcanvas Menu Section Begin -->
-    <!-- <div class="offcanvas-menu-overlay"></div>
-    <div class="canvas-open">
-        <i class="icon_menu"></i>
-    </div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="canvas-close">
-            <i class="icon_close"></i>
-        </div>
-        <div class="search-icon  search-switch">
-            <i class="icon_search"></i>
-        </div>
-        <nav class="mainmenu mobile-menu">
-            <ul>
-                <li class="active"><a href="./">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="top-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-tripadvisor"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-        <!-- <ul class="top-widget">
-            <li><i class="fa fa-phone"></i> (12) 345 67890</li>
-            <li><i class="fa fa-envelope"></i> info@relaxo.com</li>
-        </ul>
-    </div>
-    <!-- Offcanvas Menu Section End -->
+ 
 
     <!-- Header Section Begin -->
     <header class="header-section">
@@ -168,7 +136,12 @@
                                  href="{{ route('auth.userProfile') }}" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
+                                @if(Auth::user()->role=="admin")
+                                <a  href="admin/admin"
+                                     >
+                                        {{ __('dashboard') }}
+                                    </a>
+                                    @endif
                                 {{-- <div class="row" --}}
                                 {{-- class="dropdown-menu dropdown-menu-end" --}}
                                  {{-- aria-labelledby="navbarDropdown"

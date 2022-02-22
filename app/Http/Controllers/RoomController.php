@@ -66,7 +66,7 @@ class RoomController extends Controller
             $error=true;
             return redirect()->back()->with('message','Unvalid Checkout Booking');
             
-        }else if($roomS->capacity > $request->number){
+        }else if(  $request->number >$roomS->capacity){
              
             $error=true;
             return redirect()->back()->with('message','Max Capacity'." ".$roomS->capacity);
