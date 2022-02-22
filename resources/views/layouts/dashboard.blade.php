@@ -40,11 +40,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Tables</div>
-                            <!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a> --> <nav class="sb-sidenav-menu-nested nav">
+                           <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{route('admin.index')}}">Rooms</a>
                                     <a class="nav-link" href="{{route('user.index')}}">Users</a>
                                     <a class="nav-link" href="{{route('admins.show')}}">Reservations</a>
