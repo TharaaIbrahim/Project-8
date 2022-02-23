@@ -36,9 +36,13 @@
                                             @if(!empty(Session::get('emailerror')))
                                             <div class="alert alert-danger"> {{ Session::get('emailerror') }}</div>
                                               @endif
-                                            <div class="mb-3">
-                                                <label for="exampleFormControlInput1" class="form-label">phone</label>
-                                                <input type="tel" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Enter phone number" required>
+                                              <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Role</label>
+                                                <select name='role' class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                            <option>Role</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>           
+                                            </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleFormControlTextarea1" class="form-label">password</label>

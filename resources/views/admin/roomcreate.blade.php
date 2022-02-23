@@ -46,7 +46,7 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3">
-                                                        <input class="form-control" id="inputPassword" type="text" placeholder="Enter capacity" name="capacity" />
+                                                        <input class="form-control" id="inputPassword" type="number" placeholder="Enter capacity" name="capacity" />
                                                         <label for="inputPassword">capacity</label>
                                                     </div>
                                                 </div>
