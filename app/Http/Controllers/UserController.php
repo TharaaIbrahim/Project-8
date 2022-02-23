@@ -98,7 +98,8 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         $user->delete(); 
-        return redirect()->back();
+        $users=User::all();
+        return view("admin.usertable",compact("users"));
     }
 
     //user profile view
