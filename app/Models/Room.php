@@ -15,7 +15,9 @@ class Room extends Model
         'capacity',
         'bed',
         'services',
-        'img'
+        'img',
+        'img2',
+        'img3'
     ]; 
 
     public function users()

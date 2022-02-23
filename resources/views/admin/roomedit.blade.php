@@ -46,27 +46,39 @@
                                             </div>
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
+                                                    <div class="form-floating mb-3">
                                                         <input class="form-control" id="inputPassword" type="text" placeholder="Enter capacity" name="capacity" value="{{$room->capacity}}"/>
                                                         <label for="inputPassword">capacity</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
+                                                    <div class="form-floating mb-3">
                                                         <input class="form-control" id="inputPasswordConfirm" type="text" placeholder=" bed type" name="bed" value="{{$room->bed}}"/>
                                                         <label for="inputPasswordConfirm">bed</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
+                                                    <div class="form-floating mb-3 ">
                                                         <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="services" name="services" value="{{$room->services}}"/>
                                                         <label for="inputPasswordConfirm">services</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="img" value="{{$room->img}}"/>
-                                                        <label for="inputPasswordConfirm">image</label>
+                                                    <div class="form-floating mb-3 ">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image one" name="img" value="{{$room->img}}"/>
+                                                        <label for="inputPasswordConfirm">image one</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image two" name="img" value="{{$room->img2}}"/>
+                                                        <label for="inputPasswordConfirm">image two</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image three" name="img" value="{{$room->img3}}"/>
+                                                        <label for="inputPasswordConfirm">image three</label>
                                                     </div>
                                                 </div>
                                             </div>
