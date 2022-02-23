@@ -40,10 +40,13 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {$checkEmail=User::where('email',$request->email)->first();
+        if(!empty($checkEmail)){
+            return redirect()->back()->with('emailerror','This Email is Already Exist');
+        }else{
         User::create($request->all());
         $users=User::all();
-        return view('admin.usertable',compact("users"));
+        return view('admin.usertable',compact("users"));}
     }
 
     /**
@@ -77,9 +80,13 @@ class UserController extends Controller
      */
     public function update(Request $request,User $user)
     {
+        $checkEmail=User::where('email',$request->email)->where('id','<>',$user->id)->first();
+        if(!empty($checkEmail)){
+            return redirect()->back()->with('emailerror','This Email is Already Exist');
+        }else{
         $user->update($request->all());   
         $users=User::all();
-        return view('admin.usertable',compact("users"));  
+        return view('admin.usertable',compact("users"));}  
     }
 
     /**

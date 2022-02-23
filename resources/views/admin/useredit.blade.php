@@ -35,6 +35,9 @@
                                                 <label for="exampleFormControlInput1" class="form-label">email</label>
                                                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required value="{{$user->email}}">
                                             </div>
+                                            @if(!empty(Session::get('emailerror')))
+                                            <div class="alert alert-danger"> {{ Session::get('emailerror') }}</div>
+                                              @endif
                                             <div class="mb-3">
                                                 <label for="exampleFormControlTextarea1" class="form-label">password</label>
                                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>

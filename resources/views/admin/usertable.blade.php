@@ -57,8 +57,9 @@
                                             <td>{{$user->password}}</td>
                                             <td>{{$user->role}}</td>
                                           
-                                            <td><button class="edit" style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('user.edit',$user->id)}}">edit</a></button></td>
-                                          @if($user->role != "admin")
+                                           
+                                          @if($user->role != "admin") 
+                                          <td><button class="edit" style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                             <td>
                                                 
                                             <form method="POST" action="{{route('user.destroy',$user->id)}}">
